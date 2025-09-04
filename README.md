@@ -88,3 +88,5 @@ See `.env.example` for required environment variables:
 - `STRIPE_PUBLIC_KEY`: Stripe public key
 - `STRIPE_SECRET_KEY`: Stripe secret key
 - `JWT_SECRET`: JWT signing secret
+
+
