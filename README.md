@@ -10,6 +10,8 @@ FastAPI backend service for Evora Orchestrator.
 - PostgreSQL (optional for full functionality)
 - Redis (optional for full functionality)
 
+**Note:** We use psycopg v3 (URL format: `postgresql+psycopg://`)
+
 ### Setup
 
 1. Clone the repository and navigate to the backend directory:
@@ -82,9 +84,8 @@ python -m lint
 
 See `.env.example` for required environment variables:
 
-- `POSTGRES_URL`: PostgreSQL connection string
+- `DB_URL`: PostgreSQL connection string (psycopg v3 format: `postgresql+psycopg://`)
 - `REDIS_URL`: Redis connection string  
-- `S3_ENDPOINT`: S3-compatible storage endpoint
 - `STRIPE_PUBLIC_KEY`: Stripe public key
 - `STRIPE_SECRET_KEY`: Stripe secret key
 - `JWT_SECRET`: JWT signing secret

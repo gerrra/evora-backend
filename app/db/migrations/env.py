@@ -10,8 +10,6 @@ from alembic import context
 # Add the project root to the Python path
 sys.path.append(str(Path(__file__).parent.parent.parent))
 
-from app.core.config import settings
-
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -27,7 +25,8 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 target_metadata = None
 
-# Override the sqlalchemy.url with our settings
+# Set sqlalchemy.url from settings before engine_from_config
+from app.core.config import settings
 config.set_main_option("sqlalchemy.url", settings.DB_URL)
 
 # other values from the config, defined by the needs of env.py,
