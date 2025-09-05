@@ -12,6 +12,18 @@ FastAPI backend service for Evora Orchestrator.
 
 **Note:** We use psycopg v3 (URL format: `postgresql+psycopg://`)
 
+### Локальная БД
+
+Запустите PostgreSQL в Docker:
+
+```bash
+docker run --name evora-pg -d \
+  -e POSTGRES_USER=evora \
+  -e POSTGRES_PASSWORD=evora \
+  -e POSTGRES_DB=evora \
+  -p 5434:5432 postgres:16
+```
+
 ### Setup
 
 1. Clone the repository and navigate to the backend directory:
